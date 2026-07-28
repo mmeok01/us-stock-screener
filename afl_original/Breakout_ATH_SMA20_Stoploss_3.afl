@@ -1,0 +1,110 @@
+//==============================================================================
+// STRATEGI: Breakout ATH / 52-Week High / Resistance Horisontal
+// EXIT     : Selama posisi TERBUKA, exit jika Close < SMA20
+// STOPLOSS : Low dari candle SAAT BELI (level TETAP/terkunci, tidak ikut update)
+// Studi kasus acuan: Saham INET - breakout tanggal 10/11/2025
+//
+// CATATAN: logika Buy/Sell pakai LOOP per-bar (bukan IIf/ValueWhen biasa),
+// karena stoploss & exit di sini bersifat SEKUENSIAL/tergantung status posisi:
+//   - Sinyal Buy tidak boleh "retrigger" saat breakout menyala beberapa hari beruntun
+//   - Level stoploss harus terkunci ke Low HARI BELI yang sebenarnya
+//   - Exit (stoploss maupun SMA20) hanya dicek SELAMA posisi masih terbuka
+//==============================================================================
+
+// ---------------- PARAMETER (bisa diubah dari Parameters window) ----------------
+LookbackResistance = Param("Lookback Resistance/ATH (bar)", 250, 20, 500, 10);
+UseVolumeFilter     = ParamToggle("Filter Volume (breakout valid)", "Tidak|Ya", 0);
+VolMultiplier       = Param("Syarat Volume > MA20 Volume x", 1.5, 1, 5, 0.1);
+MAPeriod             = Param("Periode SMA Exit", 20, 5, 100, 1);
+
+// ---------------- LEVEL RESISTANCE / ATH / 52-WEEK HIGH ----------------
+Resistance = Ref(HHV(High, LookbackResistance), -1);
+
+// ---------------- KONDISI DASAR (aman dihitung vector, tidak tergantung status posisi) ----------------
+VolumeOK      = IIf(UseVolumeFilter, Volume > MA(Volume, 20) * VolMultiplier, True);
+BreakoutValid = Close > Resistance AND VolumeOK;
+SMA20         = MA(Close, MAPeriod);
+
+// ---------------- LOOP: TRACKING POSISI SECARA SEKUENSIAL ----------------
+Buy           = 0;
+Sell          = 0;
+StopLevel     = Null;   // level stoploss (Low candle beli), hanya terisi selama posisi terbuka
+EntryPriceArr = Null;   // harga beli (entry), hanya terisi selama posisi terbuka
+SellPriceArr  = Null;
+
+InPosition = False;
+EntryLow   = 0;
+EntryClose = 0;
+
+for (i = 1; i < BarCount; i++)
+{
+    ThisBarHasPosition = InPosition;
+
+    if (NOT InPosition)
+    {
+        if (BreakoutValid[i])
+        {
+            Buy[i] = 1;
+            InPosition = True;
+            EntryLow   = Low[i];
+            EntryClose = Close[i];
+            ThisBarHasPosition = True;
+        }
+    }
+    else
+    {
+        StopHit = Low[i] < EntryLow;          // harga tembus di bawah Low candle beli
+        SellMA  = Close[i] < SMA20[i];         // closing di bawah SMA20
+
+        if (StopHit OR SellMA)
+        {
+            Sell[i] = 1;
+            InPosition = False;
+            SellPriceArr[i] = IIf(StopHit, Min(Open[i], EntryLow), Close[i]);
+        }
+    }
+
+    if (ThisBarHasPosition)
+    {
+        StopLevel[i]     = EntryLow;
+        EntryPriceArr[i] = EntryClose;
+    }
+}
+
+BuyPrice  = Close;
+SellPrice = Nz(SellPriceArr, Close);
+
+// ---------------- % STOPLOSS DARI HARGA BELI & % RETURN BELI-JUAL ----------------
+StopLossPct = (EntryPriceArr - StopLevel) / EntryPriceArr * 100;  // % risiko stoploss dari harga beli
+ReturnPct   = (SellPrice - EntryPriceArr) / EntryPriceArr * 100;  // % hasil saat posisi ditutup (jual)
+
+// ---------------- TAMPILAN CHART ----------------
+SetChartOptions(0, chartShowDates);
+Plot(Close, "Close", colorDefault, styleCandle);
+Plot(SMA20, "SMA" + MAPeriod, colorBlue, styleLine | styleThick);
+Plot(Resistance, "Resistance/ATH " + LookbackResistance + "bar", colorOrange, styleLine | styleDashed);
+Plot(StopLevel, "Stoploss", colorRed, styleDots | styleNoRescale);
+
+PlotShapes(IIf(Buy, shapeUpArrow, shapeNone), colorGreen, 0, Low, -15);
+PlotShapes(IIf(Sell, shapeDownArrow, shapeNone), colorRed, 0, High, 15);
+
+Title = Name() + " - " + Date() +
+        " | Close: " + C +
+        " | Resistance: " + WriteVal(Resistance, 1.2) +
+        " | SMA" + MAPeriod + ": " + WriteVal(SMA20, 1.2) +
+        " | Stoploss aktif: " + WriteVal(Nz(StopLevel,0), 1.2) +
+        " (" + WriteVal(Nz(StopLossPct,0), 1.2) + "%)";
+
+// ---------------- EXPLORATION (opsional, cek histori sinyal) ----------------
+Filter = Buy OR Sell;
+PosisiText = WriteIf(Buy, "BELI", WriteIf(Sell, "JUAL", ""));
+RowColor   = IIf(Buy, colorGreen, IIf(Sell, colorRed, colorDefault));
+
+AddColumn(DateTime(), "Tanggal", formatDateTime, colorWhite, RowColor);
+AddTextColumn(PosisiText, "Posisi", 1, colorWhite, RowColor);
+AddColumn(Close, "Close", 1.2, colorWhite, RowColor);
+AddColumn(Resistance, "Resistance", 1.2, colorWhite, RowColor);
+AddColumn(SMA20, "SMA20", 1.2, colorWhite, RowColor);
+AddColumn(IIf(Buy, StopLevel, Null), "Stoploss (Low Buy)", 1.2, colorWhite, RowColor);
+AddColumn(IIf(Buy, StopLossPct, Null), "Stoploss %", 1.2, colorWhite, RowColor);
+AddColumn(IIf(Sell, ReturnPct, Null), "Return % (Jual)", 1.2, colorWhite, RowColor);
