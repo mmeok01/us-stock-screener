@@ -1,0 +1,34 @@
+name: Run US Stock Screener
+
+on:
+  schedule:
+    - cron: "*/15 13-20 * * 1-5"
+  workflow_dispatch: {}
+
+jobs:
+  screen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Jalankan screener
+        run: python screener.py
+
+      - name: Commit & push hasil terbaru
+        run: |
+          git config user.name "screener-bot"
+          git config user.email "screener-bot@users.noreply.github.com"
+          git add results/ data/
+          git diff --quiet --cached || git commit -m "Update sinyal $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
