@@ -17,10 +17,12 @@ lalu ditandai preview=True. Setelah market tutup, jalankan sekali lagi supaya
 bar tsb "mengeras" jadi bar harian final (preview=False).
 """
 
+import io
 import time
 from datetime import datetime, timezone
 
 import pandas as pd
+import requests
 import yfinance as yf
 
 SP500_WIKI_URL = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
@@ -43,7 +45,18 @@ def get_sp500_universe(refresh: bool = False) -> pd.DataFrame:
     if not refresh and os.path.exists(UNIVERSE_CACHE_PATH):
         return pd.read_csv(UNIVERSE_CACHE_PATH)
 
-    tables = pd.read_html(SP500_WIKI_URL)
+    # Wikipedia menolak request tanpa "User-Agent" (dianggap bot -> HTTP 403).
+    # Jadi kita ambil HTML-nya dulu pakai requests + header User-Agent seperti
+    # browser sungguhan, baru diparse tabelnya oleh pandas.
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+        )
+    }
+    resp = requests.get(SP500_WIKI_URL, headers=headers, timeout=15)
+    resp.raise_for_status()
+    tables = pd.read_html(io.StringIO(resp.text))
     sp500 = tables[0][["Symbol", "Security", "GICS Sector"]].copy()
     sp500.columns = ["ticker", "name", "sector"]
     # yfinance pakai tanda '-' bukan '.' untuk share class, mis. BRK.B -> BRK-B
