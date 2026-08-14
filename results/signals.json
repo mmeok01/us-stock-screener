@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-14T20:17:42.816823+00:00",
+  "generated_at_utc": "2026-08-14T21:45:32.308035+00:00",
   "params": {
     "lookback_resistance": 250,
     "use_volume_filter": false,
@@ -38,9 +38,9 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 569.54,
       "resistance": 571.17,
-      "sma_exit": 546.86,
-      "stop_level": 560.98,
-      "stop_loss_pct": 1.7,
+      "sma_exit": 546.66,
+      "stop_level": 543.97,
+      "stop_loss_pct": 1.47,
       "return_pct": null
     },
     {
@@ -50,7 +50,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 254.79,
       "resistance": 261.16,
-      "sma_exit": 246.11,
+      "sma_exit": 246.55,
       "stop_level": 244.02,
       "stop_loss_pct": 3.95,
       "return_pct": null
@@ -62,7 +62,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 415.21,
       "resistance": 421.79,
-      "sma_exit": 392.36,
+      "sma_exit": 392.35,
       "stop_level": 391.0,
       "stop_loss_pct": 4.13,
       "return_pct": null
@@ -94,13 +94,13 @@
     {
       "ticker": "TECH",
       "sector": "Health Care",
-      "signal": "HOLD",
+      "signal": "BUY",
       "date": "2026-08-14T00:00:00.000",
       "close": 72.4,
       "resistance": 72.39,
-      "sma_exit": 71.98,
-      "stop_level": 71.5,
-      "stop_loss_pct": 0.86,
+      "sma_exit": 71.99,
+      "stop_level": 72.07,
+      "stop_loss_pct": 0.45,
       "return_pct": null
     },
     {
@@ -110,7 +110,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 280.05,
       "resistance": 288.02,
-      "sma_exit": 247.27,
+      "sma_exit": 247.19,
       "stop_level": 252.07,
       "stop_loss_pct": 3.32,
       "return_pct": null
@@ -122,7 +122,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 111.09,
       "resistance": 110.2,
-      "sma_exit": 105.68,
+      "sma_exit": 105.64,
       "stop_level": 106.75,
       "stop_loss_pct": 2.37,
       "return_pct": null
@@ -134,7 +134,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 74.73,
       "resistance": 74.68,
-      "sma_exit": 72.52,
+      "sma_exit": 72.35,
       "stop_level": 73.61,
       "stop_loss_pct": 1.49,
       "return_pct": null
@@ -146,7 +146,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 417.6,
       "resistance": 425.95,
-      "sma_exit": 389.0,
+      "sma_exit": 389.33,
       "stop_level": 374.74,
       "stop_loss_pct": 1.31,
       "return_pct": null
@@ -168,9 +168,9 @@
       "sector": "Consumer Discretionary",
       "signal": "HOLD",
       "date": "2026-08-14T00:00:00.000",
-      "close": 225.25,
+      "close": 225.26,
       "resistance": 229.76,
-      "sma_exit": 208.34,
+      "sma_exit": 208.21,
       "stop_level": 212.47,
       "stop_loss_pct": 2.52,
       "return_pct": null
@@ -180,9 +180,9 @@
       "sector": "Information Technology",
       "signal": "HOLD",
       "date": "2026-08-14T00:00:00.000",
-      "close": 491.13,
+      "close": 490.81,
       "resistance": 514.0,
-      "sma_exit": 436.11,
+      "sma_exit": 436.1,
       "stop_level": 487.12,
       "stop_loss_pct": 1.49,
       "return_pct": null
@@ -206,7 +206,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 451.51,
       "resistance": 478.0,
-      "sma_exit": 422.39,
+      "sma_exit": 423.07,
       "stop_level": 409.14,
       "stop_loss_pct": 6.41,
       "return_pct": null
@@ -230,7 +230,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 332.69,
       "resistance": 331.31,
-      "sma_exit": 296.47,
+      "sma_exit": 297.17,
       "stop_level": 327.88,
       "stop_loss_pct": 1.45,
       "return_pct": null
@@ -242,7 +242,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 51.02,
       "resistance": 52.92,
-      "sma_exit": 48.72,
+      "sma_exit": 48.71,
       "stop_level": 46.98,
       "stop_loss_pct": 5.49,
       "return_pct": null
@@ -254,7 +254,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 310.2,
       "resistance": 314.28,
-      "sma_exit": 282.05,
+      "sma_exit": 283.49,
       "stop_level": 261.04,
       "stop_loss_pct": 11.46,
       "return_pct": null
@@ -266,7 +266,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 93.05,
       "resistance": 95.58,
-      "sma_exit": 85.42,
+      "sma_exit": 85.75,
       "stop_level": 88.6,
       "stop_loss_pct": 6.57,
       "return_pct": null
@@ -290,7 +290,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 153.64,
       "resistance": 157.06,
-      "sma_exit": 147.26,
+      "sma_exit": 147.38,
       "stop_level": 146.8,
       "stop_loss_pct": 4.44,
       "return_pct": null
@@ -314,7 +314,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 318.13,
       "resistance": 325.58,
-      "sma_exit": 306.1,
+      "sma_exit": 307.74,
       "stop_level": 312.3,
       "stop_loss_pct": 1.34,
       "return_pct": null
@@ -326,7 +326,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 188.46,
       "resistance": 188.1,
-      "sma_exit": 182.0,
+      "sma_exit": 181.57,
       "stop_level": 186.08,
       "stop_loss_pct": 1.26,
       "return_pct": null
@@ -338,7 +338,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 254.09,
       "resistance": 255.68,
-      "sma_exit": 250.71,
+      "sma_exit": 250.41,
       "stop_level": 241.39,
       "stop_loss_pct": 2.87,
       "return_pct": null
@@ -374,7 +374,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 97.66,
       "resistance": 100.93,
-      "sma_exit": 95.83,
+      "sma_exit": 95.77,
       "stop_level": 87.18,
       "stop_loss_pct": 2.6,
       "return_pct": null
@@ -386,7 +386,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 207.08,
       "resistance": 209.06,
-      "sma_exit": 181.97,
+      "sma_exit": 182.41,
       "stop_level": 193.13,
       "stop_loss_pct": 2.81,
       "return_pct": null
@@ -398,7 +398,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 308.72,
       "resistance": 315.68,
-      "sma_exit": 301.28,
+      "sma_exit": 301.74,
       "stop_level": 300.86,
       "stop_loss_pct": 2.84,
       "return_pct": null
@@ -410,7 +410,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 268.91,
       "resistance": 280.11,
-      "sma_exit": 259.37,
+      "sma_exit": 259.33,
       "stop_level": 262.1,
       "stop_loss_pct": 4.36,
       "return_pct": null
@@ -422,7 +422,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 87.57,
       "resistance": 88.4,
-      "sma_exit": 83.01,
+      "sma_exit": 82.53,
       "stop_level": 85.67,
       "stop_loss_pct": 3.04,
       "return_pct": null
@@ -434,7 +434,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 94.99,
       "resistance": 94.94,
-      "sma_exit": 90.16,
+      "sma_exit": 90.02,
       "stop_level": 92.82,
       "stop_loss_pct": 2.29,
       "return_pct": null
@@ -446,7 +446,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 255.48,
       "resistance": 259.98,
-      "sma_exit": 248.39,
+      "sma_exit": 248.75,
       "stop_level": 233.77,
       "stop_loss_pct": 8.11,
       "return_pct": null
@@ -470,9 +470,9 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 233.61,
       "resistance": 232.89,
-      "sma_exit": 212.24,
-      "stop_level": 214.21,
-      "stop_loss_pct": 4.52,
+      "sma_exit": 211.36,
+      "stop_level": 221.23,
+      "stop_loss_pct": 1.93,
       "return_pct": null
     },
     {
@@ -482,7 +482,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 125.13,
       "resistance": 127.72,
-      "sma_exit": 121.64,
+      "sma_exit": 121.65,
       "stop_level": 115.36,
       "stop_loss_pct": 2.44,
       "return_pct": null
@@ -494,7 +494,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 234.4,
       "resistance": 240.13,
-      "sma_exit": 229.21,
+      "sma_exit": 230.6,
       "stop_level": 220.0,
       "stop_loss_pct": 3.47,
       "return_pct": null
@@ -506,7 +506,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 102.07,
       "resistance": 104.68,
-      "sma_exit": 96.76,
+      "sma_exit": 96.88,
       "stop_level": 95.33,
       "stop_loss_pct": 2.83,
       "return_pct": null
@@ -518,7 +518,7 @@
       "date": "2026-08-14T00:00:00.000",
       "close": 154.48,
       "resistance": 156.47,
-      "sma_exit": 145.08,
+      "sma_exit": 144.91,
       "stop_level": 146.89,
       "stop_loss_pct": 2.63,
       "return_pct": null
@@ -526,14 +526,14 @@
     {
       "ticker": "USB",
       "sector": "Financials",
-      "signal": "HOLD",
+      "signal": "SELL",
       "date": "2026-08-14T00:00:00.000",
       "close": 65.42,
       "resistance": 65.61,
-      "sma_exit": 63.92,
-      "stop_level": 59.84,
-      "stop_loss_pct": 1.41,
-      "return_pct": null
+      "sma_exit": 63.97,
+      "stop_level": 64.97,
+      "stop_loss_pct": 0.31,
+      "return_pct": -0.31
     },
     {
       "ticker": "VLO",
@@ -548,13 +548,25 @@
       "return_pct": null
     },
     {
+      "ticker": "WAB",
+      "sector": "Industrials",
+      "signal": "HOLD",
+      "date": "2026-08-14T00:00:00.000",
+      "close": 299.02,
+      "resistance": 306.64,
+      "sma_exit": 292.86,
+      "stop_level": 271.44,
+      "stop_loss_pct": 6.4,
+      "return_pct": null
+    },
+    {
       "ticker": "ZBRA",
       "sector": "Information Technology",
       "signal": "HOLD",
       "date": "2026-08-14T00:00:00.000",
       "close": 376.03,
       "resistance": 386.23,
-      "sma_exit": 317.75,
+      "sma_exit": 319.32,
       "stop_level": 329.47,
       "stop_loss_pct": 10.67,
       "return_pct": null
