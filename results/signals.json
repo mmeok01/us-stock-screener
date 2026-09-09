@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-09T17:07:05.033920+00:00",
+  "generated_at_utc": "2026-09-09T19:49:05.791750+00:00",
   "params": {
     "lookback_resistance": 250,
     "use_volume_filter": false,
@@ -8,13 +8,25 @@
   },
   "signals": [
     {
+      "ticker": "CVX",
+      "sector": "Energy",
+      "signal": "BUY",
+      "date": "2026-09-09T00:00:00.000",
+      "close": 213.85,
+      "resistance": 213.31,
+      "sma_exit": 204.41,
+      "stop_level": 212.23,
+      "stop_loss_pct": 0.76,
+      "return_pct": null
+    },
+    {
       "ticker": "DE",
       "sector": "Industrials",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 675.43,
+      "close": 677.61,
       "resistance": 705.88,
-      "sma_exit": 640.95,
+      "sma_exit": 641.06,
       "stop_level": 654.05,
       "stop_loss_pct": 3.26,
       "return_pct": null
@@ -24,9 +36,9 @@
       "sector": "Information Technology",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 541.97,
+      "close": 534.91,
       "resistance": 538.47,
-      "sma_exit": 474.96,
+      "sma_exit": 474.61,
       "stop_level": 478.31,
       "stop_loss_pct": 7.37,
       "return_pct": null
@@ -36,7 +48,7 @@
       "sector": "Information Technology",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 29.67,
+      "close": 29.75,
       "resistance": 31.65,
       "sma_exit": 29.44,
       "stop_level": 29.51,
@@ -46,23 +58,23 @@
     {
       "ticker": "IQV",
       "sector": "Health Care",
-      "signal": "SELL",
+      "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 255.32,
+      "close": 256.96,
       "resistance": 271.8,
-      "sma_exit": 255.45,
+      "sma_exit": 255.53,
       "stop_level": 246.87,
       "stop_loss_pct": 3.59,
-      "return_pct": -0.29
+      "return_pct": null
     },
     {
       "ticker": "MPC",
       "sector": "Energy",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 399.4,
+      "close": 400.05,
       "resistance": 399.62,
-      "sma_exit": 369.42,
+      "sma_exit": 369.45,
       "stop_level": 317.13,
       "stop_loss_pct": 5.48,
       "return_pct": null
@@ -72,9 +84,9 @@
       "sector": "Health Care",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 147.71,
+      "close": 147.98,
       "resistance": 156.92,
-      "sma_exit": 146.77,
+      "sma_exit": 146.78,
       "stop_level": 133.06,
       "stop_loss_pct": 1.84,
       "return_pct": null
@@ -84,9 +96,9 @@
       "sector": "Health Care",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 137.35,
+      "close": 136.79,
       "resistance": 176.66,
-      "sma_exit": 125.83,
+      "sma_exit": 125.8,
       "stop_level": 114.46,
       "stop_loss_pct": 34.36,
       "return_pct": null
@@ -96,9 +108,9 @@
       "sector": "Energy",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 260.55,
+      "close": 261.01,
       "resistance": 261.0,
-      "sma_exit": 244.26,
+      "sma_exit": 244.28,
       "stop_level": 213.08,
       "stop_loss_pct": 4.52,
       "return_pct": null
@@ -106,23 +118,23 @@
     {
       "ticker": "RVTY",
       "sector": "Health Care",
-      "signal": "SELL",
+      "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 122.71,
+      "close": 124.17,
       "resistance": 133.0,
-      "sma_exit": 124.0,
+      "sma_exit": 124.07,
       "stop_level": 115.29,
       "stop_loss_pct": 3.48,
-      "return_pct": 2.73
+      "return_pct": null
     },
     {
       "ticker": "VLO",
       "sector": "Energy",
       "signal": "HOLD",
       "date": "2026-09-09T00:00:00.000",
-      "close": 384.57,
+      "close": 387.41,
       "resistance": 384.26,
-      "sma_exit": 353.89,
+      "sma_exit": 354.04,
       "stop_level": 313.95,
       "stop_loss_pct": 3.08,
       "return_pct": null
