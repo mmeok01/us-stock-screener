@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-18T17:01:27.752831+00:00",
+  "generated_at_utc": "2026-09-18T19:33:32.150146+00:00",
   "params": {
     "lookback_resistance": 250,
     "use_volume_filter": false,
@@ -12,9 +12,9 @@
       "sector": "Consumer Discretionary",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 93.92,
+      "close": 93.57,
       "resistance": 95.85,
-      "sma_exit": 87.43,
+      "sma_exit": 87.41,
       "stop_level": 89.59,
       "stop_loss_pct": 4.53,
       "return_pct": null
@@ -24,9 +24,9 @@
       "sector": "Information Technology",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 237.4,
+      "close": 238.91,
       "resistance": 250.32,
-      "sma_exit": 215.84,
+      "sma_exit": 215.92,
       "stop_level": 216.05,
       "stop_loss_pct": 8.21,
       "return_pct": null
@@ -36,9 +36,9 @@
       "sector": "Industrials",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 681.53,
+      "close": 681.26,
       "resistance": 705.88,
-      "sma_exit": 667.27,
+      "sma_exit": 667.25,
       "stop_level": 654.05,
       "stop_loss_pct": 3.26,
       "return_pct": null
@@ -48,9 +48,9 @@
       "sector": "Information Technology",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 579.03,
+      "close": 574.04,
       "resistance": 593.98,
-      "sma_exit": 504.22,
+      "sma_exit": 503.97,
       "stop_level": 478.31,
       "stop_loss_pct": 7.37,
       "return_pct": null
@@ -60,7 +60,7 @@
       "sector": "Information Technology",
       "signal": "SELL",
       "date": "2026-09-18T00:00:00.000",
-      "close": 29.15,
+      "close": 29.11,
       "resistance": 31.65,
       "sma_exit": 30.23,
       "stop_level": 29.51,
@@ -72,9 +72,9 @@
       "sector": "Health Care",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 266.04,
+      "close": 265.37,
       "resistance": 273.88,
-      "sma_exit": 263.14,
+      "sma_exit": 263.11,
       "stop_level": 246.87,
       "stop_loss_pct": 3.59,
       "return_pct": null
@@ -84,9 +84,9 @@
       "sector": "Energy",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 422.86,
+      "close": 424.22,
       "resistance": 423.83,
-      "sma_exit": 387.21,
+      "sma_exit": 387.28,
       "stop_level": 317.13,
       "stop_loss_pct": 5.48,
       "return_pct": null
@@ -96,9 +96,9 @@
       "sector": "Energy",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 272.27,
+      "close": 273.68,
       "resistance": 274.21,
-      "sma_exit": 254.16,
+      "sma_exit": 254.23,
       "stop_level": 213.08,
       "stop_loss_pct": 4.52,
       "return_pct": null
@@ -108,9 +108,9 @@
       "sector": "Health Care",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 144.43,
+      "close": 142.66,
       "resistance": 149.52,
-      "sma_exit": 130.31,
+      "sma_exit": 130.22,
       "stop_level": 128.67,
       "stop_loss_pct": 8.22,
       "return_pct": null
@@ -120,9 +120,9 @@
       "sector": "Health Care",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 652.6,
+      "close": 647.72,
       "resistance": 663.57,
-      "sma_exit": 622.98,
+      "sma_exit": 622.74,
       "stop_level": 638.0,
       "stop_loss_pct": 1.61,
       "return_pct": null
@@ -132,9 +132,9 @@
       "sector": "Energy",
       "signal": "HOLD",
       "date": "2026-09-18T00:00:00.000",
-      "close": 410.08,
+      "close": 412.88,
       "resistance": 413.44,
-      "sma_exit": 373.21,
+      "sma_exit": 373.35,
       "stop_level": 313.95,
       "stop_loss_pct": 3.08,
       "return_pct": null
@@ -142,14 +142,14 @@
     {
       "ticker": "WAT",
       "sector": "Health Care",
-      "signal": "HOLD",
+      "signal": "SELL",
       "date": "2026-09-18T00:00:00.000",
-      "close": 423.09,
+      "close": 422.0,
       "resistance": 431.78,
-      "sma_exit": 412.89,
+      "sma_exit": 412.84,
       "stop_level": 422.06,
       "stop_loss_pct": 1.78,
-      "return_pct": null
+      "return_pct": -1.78
     }
   ]
 }
