@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-25T22:14:48.064988+00:00",
+  "generated_at_utc": "2026-11-26T22:11:49.162382+00:00",
   "params": {
     "lookback_resistance": 250,
     "use_volume_filter": false,
@@ -101,6 +101,18 @@
       "sma_exit": 270.96,
       "stop_level": 251.74,
       "stop_loss_pct": 3.89,
+      "return_pct": null
+    },
+    {
+      "ticker": "CDW",
+      "sector": "Information Technology",
+      "signal": "BUY",
+      "date": "2026-11-25T00:00:00.000",
+      "close": 174.97,
+      "resistance": 174.46,
+      "sma_exit": 163.93,
+      "stop_level": 158.28,
+      "stop_loss_pct": 9.54,
       "return_pct": null
     },
     {
@@ -303,8 +315,8 @@
       "close": 352.56,
       "resistance": 350.34,
       "sma_exit": 332.91,
-      "stop_level": 346.67,
-      "stop_loss_pct": 1.67,
+      "stop_level": 345.57,
+      "stop_loss_pct": 1.98,
       "return_pct": null
     }
   ]
